@@ -5,6 +5,18 @@
 ![许可](https://img.shields.io/badge/license-MIT-green)
 ![大小](https://img.shields.io/badge/大小-620MB-orange)
 
+## 📥 下载
+
+最新版（v0.2.0 · 约 620 MB · Apple Silicon）：
+
+[⬇️ 点击下载 DeepSeekHarness-0.2.0.dmg](https://github.com/cj5pvj4vjt-ux/DeepSeekHarness-Mac-Installer/releases/latest/download/DeepSeekHarness-0.2.0.dmg)
+
+[校验文件 sha256](https://github.com/cj5pvj4vjt-ux/DeepSeekHarness-Mac-Installer/releases/latest/download/DeepSeekHarness-0.2.0.dmg.sha256)
+
+或直接访问 [Releases 页面](https://github.com/cj5pvj4vjt-ux/DeepSeekHarness-Mac-Installer/releases/latest)
+
+---
+
 把 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（dsh）封装成
 一个 **双击即可安装、离线开箱即用** 的 macOS App + DMG 安装包，专为 **Apple Silicon Mac
 （M1/M2/M3/M4）** 设计。
