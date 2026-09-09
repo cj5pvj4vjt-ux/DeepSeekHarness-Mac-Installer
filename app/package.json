@@ -1,0 +1,7 @@
+{
+  "name": "deepseek-harness-desktop",
+  "version": "0.2.0",
+  "description": "DeepSeek Harness 桌面应用（自包含运行时 + 全家桶插件，分享版 0.2.0）",
+  "main": "main.js",
+  "license": "MIT"
+}
