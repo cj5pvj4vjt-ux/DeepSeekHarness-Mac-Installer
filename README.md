@@ -1,5 +1,10 @@
 # DeepSeek Harness macOS 一键安装包（自包含版 v0.2.0）
 
+![平台](https://img.shields.io/badge/platform-macOS%2013%2B-007AFF)
+![架构](https://img.shields.io/badge/arch-Apple%20Silicon-blue)
+![许可](https://img.shields.io/badge/license-MIT-green)
+![大小](https://img.shields.io/badge/大小-620MB-orange)
+
 把 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（dsh）封装成
 一个 **双击即可安装、离线开箱即用** 的 macOS App + DMG 安装包，专为 **Apple Silicon Mac
 （M1/M2/M3/M4）** 设计。
