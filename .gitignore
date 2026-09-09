@@ -1,0 +1,5 @@
+.DS_Store
+rebuild/
+*.dmg
+*.zip
+*.sha256
