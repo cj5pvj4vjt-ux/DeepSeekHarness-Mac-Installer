@@ -108,6 +108,16 @@ if [ -d "$LIBDIR" ]; then
   done
   [ "$badlib" -eq 0 ] && ok "runtime/lib 共 $cnt 个 dylib，全部无绝对路径依赖"
   [ "$unres" -eq 0 ] && ok "runtime/lib 内部依赖全部可解析"
+  # 说明：libcrypto / libnode 等二进制里**内嵌字符串**可能仍出现 /opt/homebrew
+  # （OpenSSL 的 engines-3 目录、node 的构建期路径等）。那只是编译期常量，
+  # 不在 dyld 的加载依赖里，启动时不会被访问 —— 上面用 otool -L 判定即可，
+  # 不要用 grep 扫二进制，否则会误报成「依赖泄漏」。
+  emb="$(for f in "$LIBDIR"/*.dylib; do
+            [ -e "$f" ] || continue
+            otool -L "$f" 2>/dev/null | tail -n +2 | grep -q "/opt/homebrew" || continue
+            basename "$f"
+          done | wc -l | tr -d ' ')"
+  [ "$emb" -eq 0 ] && ok "无 dylib 通过加载命令引用 Homebrew（内嵌字符串不算）"
 fi
 
 # ------------------------------------------- 4. runtime/dsh 原生模块 (*.node)
